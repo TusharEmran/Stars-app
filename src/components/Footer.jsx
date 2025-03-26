@@ -18,7 +18,7 @@ const Footer = () => {
           <div className=" hidden md:block mb-6 md:mb-0">
             <h2 className="text-xl font-semibold">Quick Links</h2>
             <ul className="mt-2 space-y-2 text-gray-400">
-              <li><a href="/home" className="hover:text-[#DAA520] transition">Home</a></li>
+              <li><a href="/" className="hover:text-[#DAA520] transition">Home</a></li>
               <li><a href="/tutorials" className="hover:text-[#DAA520] transition">Tutorials</a></li>
               <li><a href="/contact" className="hover:text-[#DAA520] transition">Contact</a></li>
               <li><a href="/memories" className="hover:text-[#DAA520] transition">Memories</a></li>

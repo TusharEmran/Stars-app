@@ -32,14 +32,14 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <NavLink to="/home" className="flex items-center">
+          <NavLink to="/" className="flex items-center">
             <img src={logo} alt="Logo" className="max-w-[100px] sm:max-w-[120px] cursor-pointer" />
           </NavLink>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8 text-gray-800 font-semibold">
             <NavLink
-              to="/home"
+              to="/"
               className={({ isActive }) =>
                 isActive ? 'text-blue-600' : 'hover:text-blue-600'
               }
@@ -96,7 +96,7 @@ const Navbar = () => {
         <ul className="mt-10 space-y-6 font-semibold text-gray-800">
           <li>
             <NavLink
-              to="/home"
+              to="/"
               onClick={toggleDrawer}
               className={({ isActive }) =>
                 isActive ? 'block text-blue-600' : 'block hover:text-blue-600'
