@@ -7,6 +7,7 @@ import mentors from '../components/Mentors';
 import faculty from '../components/Faculty';
 import techSupport from '../components/TechSupport';
 import { FaChalkboardTeacher, FaGraduationCap, FaUsers, FaRocket } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const features = [
   { id: 1, title: "Expert Mentors", description: "Learn from the best mentors with years of experience.", icon: <FaChalkboardTeacher className="text-blue-500 text-4xl" /> },
@@ -25,25 +26,27 @@ const Home = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <div 
-        className="min-h-screen text-white flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-20 py-10 bg-cover bg-center relative" 
+      <div
+        className="min-h-screen w-full text-white flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-20 py-10 bg-cover bg-center relative"
         style={{ backgroundImage: `url(${cover1})` }}
       >
         <div className="relative z-10 w-full md:w-1/2 mt-10 md:mb-0" data-aos="fade-right">
           <h1 className="text-black font-extrabold text-4xl sm:text-5xl md:text-6xl">STARs ✨</h1>
           <p className="text-base sm:text-lg md:text-xl mt-4 text-red-800">Academic & Admission Mentorship</p>
           <div className="flex flex-col sm:flex-row sm:items-center mt-6">
-            <a href="/tutorials">
+            <Link to="/tutorials">
               <button className="w-full sm:w-auto px-8 py-3 text-lg font-semibold rounded-full shadow-lg bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-red-600 hover:to-green-500 hover:scale-110 transform transition-all duration-300">
                 🚀 Enroll Now
               </button>
-            </a>
+            </Link>
           </div>
         </div>
 
-        <div className='w-full md:w-auto bg-white p-3 rounded-lg shadow-lg text-black' data-aos="fade-left">
-          <h1 className='text-blue-700 font-bold text-xl text-center'>Why Enroll?</h1>
-          <p className="mt-2 text-gray-700 text-center text-sm sm:text-base">Unlock your potential with expert mentorship. Get personalized guidance for academic excellence and admissions success.</p>
+        <div className="w-full md:w-auto bg-white p-3 rounded-lg shadow-lg text-black mt-10 md:mt-0" data-aos="fade-left">
+          <h1 className="text-blue-700 font-bold text-xl text-center">Why Enroll?</h1>
+          <p className="mt-2 text-gray-700 text-center text-sm sm:text-base">
+            Unlock your potential with expert mentorship. Get personalized guidance for academic excellence and admissions success.
+          </p>
         </div>
       </div>
 
@@ -65,11 +68,11 @@ const Home = () => {
       {[{ title: "Meet Our Faculty", data: faculty }, { title: "Our Mentors", data: mentors }, { title: "Tech Support", data: techSupport }].map((section, index) => (
         <div key={index} className="bg-white text-black py-16 px-4 sm:px-6 md:px-20">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-blue-700 mb-8" data-aos="fade-down">{section.title}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"> 
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {section.data.map((person) => (
-              <div 
-                key={person.id} 
-                className="relative bg-gray-100 p-6 rounded-xl shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer" 
+              <div
+                key={person.id}
+                className="relative bg-gray-100 p-6 rounded-xl shadow-lg transform transition duration-500 hover:scale-105 cursor-pointer"
                 data-aos="zoom-in"
                 onClick={() => setSelectedMentor(person)}
               >
@@ -96,7 +99,6 @@ const Home = () => {
       {/* Footer Section */}
       <footer className="bg-gray-900 text-white py-6 text-center px-4">
         <p className="text-lg">🌟 STARs Mentorship | Achieve Your Dreams 🚀</p>
-        
       </footer>
     </Layout>
   );
