@@ -1,6 +1,6 @@
 import Pic from '../pictures/tushar.jpg'
 
-const Mentors = [
+const TechSupport = [
     { id: 1, name: "Arpon Ahsan Apon", expertise: "ME BUET", image:Pic },
     { id: 2, name: "Tushar Emran", expertise: "CSE CUET", image: "/images/john-smith.jpg" },
     { id: 3, name: "Takibur", expertise: "CSE BUET", image: "/images/emily-davis.jpg" },
@@ -9,4 +9,4 @@ const Mentors = [
 
   ];
   
-  export default Mentors;
+  export default TechSupport;
